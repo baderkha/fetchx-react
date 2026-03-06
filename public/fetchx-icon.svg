@@ -1,0 +1,52 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FetchX app icon">
+  <defs>
+    <linearGradient id="bgGradient" x1="140" y1="92" x2="884" y2="940" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5BA8FF"/>
+      <stop offset="0.5" stop-color="#3F7CFF"/>
+      <stop offset="1" stop-color="#1E4ECF"/>
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="512" y1="120" x2="512" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.44"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="xStroke" x1="326" y1="300" x2="700" y2="724" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BAF9FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="cardShadow" x="84" y="80" width="856" height="868" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="20"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.05 0 0 0 0 0.16 0 0 0 0 0.42 0 0 0 0.34 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <filter id="innerGlow" x="160" y="128" width="704" height="704" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="8"/>
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.22 0"/>
+      <feBlend mode="screen" in2="shape" result="effect1_innerShadow_1_1"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="230" fill="#0B1226"/>
+
+  <g filter="url(#cardShadow)">
+    <rect x="124" y="120" width="776" height="776" rx="190" fill="url(#bgGradient)"/>
+    <rect x="124" y="120" width="776" height="776" rx="190" stroke="#CFE2FF" stroke-opacity="0.28" stroke-width="2"/>
+    <path d="M188 188C188 156.072 213.872 130.2 245.8 130.2H778.2C810.128 130.2 836 156.072 836 188V312H188V188Z" fill="url(#glassGradient)"/>
+  </g>
+
+  <g filter="url(#innerGlow)">
+    <path d="M342 724V300H672V378H430V475H630V552H430V724H342Z" fill="#F8FCFF" fill-opacity="0.96"/>
+    <path d="M480 300H586L700 462L586 624H480L594 462L480 300Z" fill="url(#xStroke)"/>
+  </g>
+
+  <circle cx="756" cy="270" r="32" fill="#FFFFFF" fill-opacity="0.2"/>
+  <circle cx="756" cy="270" r="18" fill="#FFFFFF" fill-opacity="0.6"/>
+</svg>
