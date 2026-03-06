@@ -14,4 +14,7 @@ macos: mac
 build: install
 	npm run build
 
-macos-release: build
+dist: build
+	npm run dist
+
+macos-release: dist

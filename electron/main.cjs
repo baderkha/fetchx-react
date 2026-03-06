@@ -20,6 +20,7 @@ function createWindow() {
       nodeIntegration: false,
       sandbox: false,
     },
+    icon: path.join(__dirname, 'icon.png'),
   });
 
   if (isDev) {
@@ -132,6 +133,19 @@ function sendNativeRequest(url, options, body) {
     }
     req.end();
   });
+}
+
+app.setName('fetchx');
+app.setAboutPanelOptions({
+  applicationName: 'fetchx',
+  applicationVersion: app.getVersion(),
+  version: app.getVersion(),
+  copyright: 'Copyright © Ahmad Baderkhan',
+  iconPath: path.join(__dirname, 'icon.png'),
+});
+
+if (process.platform === 'darwin') {
+  app.dock.setIcon(path.join(__dirname, 'icon.png'));
 }
 
 app.whenReady().then(() => {

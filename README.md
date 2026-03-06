@@ -1,56 +1,91 @@
-# FetchX: Pitch Black Obsidian
+# FetchX
 
-**The Ultra-Premium API Client for macOS.**  
-Absolute Black. High Performance. Pure Focus.
+Desktop API client built with Electron + React for composing requests, previewing payloads, and inspecting responses.
 
----
+![Electron](https://img.shields.io/badge/Electron-36-47848F?logo=electron&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=111111)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-6-007FFF?logo=mui&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-22C55E)
 
-![Main Interface](screenshots/main_interface.png)
+## Built by
+**Developed by Ahmad Baderkhan <ahmad@baderkhan.org>**
 
-## 🌑 Obsidian Design System
-FetchX is built for engineers who demand absolute visual clarity. Every interface element is locked to **#000000 Pitch Black**, providing the highest possible contrast for your request data and eliminating UI distraction.
+## What FetchX includes
+- Multi-namespace workspaces with custom icons.
+- Request folders + drag-and-drop request organization.
+- HTTP methods: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD`.
+- Composer tabs for JSON body, query params, headers, and a final request preview.
+- Template variables like `{{token}}` with autocomplete/validation in composer fields.
+- Quick search modal with `Cmd/Ctrl + P`.
+- Response tabs for body, headers, cookies, and request timeline.
+- JSONPath filtering for JSON responses.
+- Body rendering modes for JSON/text, image, video, CSV table, PDF, HTML, and binary download fallback.
+- OpenAPI/Swagger import from URL or local JSON/YAML.
+- OpenAPI namespace refresh (for URL-imported specs).
+- Local app-state persistence through Electron (`electron-store`).
 
-## 🚀 Native Contexts
-### Namespace Isolation
-Stop mixing your production logs with test data. **Namespaces** provide a full context switch for your workflow.
-- **Physical Isolation**: Each namespace maintains its own requests, history, and active state.
-- **Visual Identifiers**: Customize your workspace with professional icons or text-based abbreviations.
-- **Integrated Explorer**: A searchable Material Icon library to define your environment's signature.
+## Screenshots
+### Main workspace
+![Main View](screenshots/main_view.png)
 
-![Namespace Manager](screenshots/namespace_manager.png)
+### Request preview
+![Request Preview](screenshots/req_preview.png)
 
-### Command Palette ($⌘K$)
-Navigate your workspace at the speed of thought. The command palette features:
-- **Aggressive Focus**: Refocuses automatically to ensure you never miss a keystroke.
-- **Shimmering Headers**: Animated spectral gradients represent different system levels.
-- **Deep Search**: Instant filtering across all request names and URLs.
+### Response inspector
+![Response](screenshots/response.png)
 
-## 🎨 Professional Polish
-- **Custom Title Bar**: Bespoke window controls integrated with macOS traffic lights.
-- **Monaco Editor**: Industrial-grade JSON editing with full diagnostics and syntax highlighting.
-- **Geist Typography**: Utilizing Vercel's Geist font for maximum readability in high-density environments.
-- **Gradient Accents**: Living UI accents that pulse with the Pitch Black Obsidian theme.
+### Search dialog
+![Search Bar](screenshots/search-bar.png)
 
----
+### Settings dialog
+![Settings](screenshots/settings.png)
 
-## 🛠 Usage
+### Create namespace
+![Create Namespace](screenshots/create_n_namespace.png)
 
-### Launch on macOS
+### Import API spec (This includes swagger)
+![Import API Spec](screenshots/import_api_spec.png)
+
+## Run locally
+### Prerequisites
+- Node.js
+- npm
+
+### Start development app (Vite + Electron)
 ```bash
-# Enter the project
-cd FetchX/fetchx-react
-
-# Instantiate and Run
-make mac
+npm install
+npm run dev:all
 ```
 
-### Development
-- `make install` — Install Nexus dependencies
-- `make dev` — Run Vite + Electron Development environment
-- `make build` — Compile production React bundle
+### Build frontend bundle
+```bash
+npm run build
+```
 
----
+### Makefile shortcuts
+```bash
+make install
+make dev
+make build
+```
 
-<p align="center">
-  <strong>Built with Focus. Driven by Design.</strong>
-</p>
+## Tech stack
+- Electron
+- React 18
+- Vite
+- Material UI
+- Monaco Editor
+- `@hello-pangea/dnd`
+- `js-yaml`
+- `jsonpath-plus`
+
+## Future work
+- [ ] GraphQL support
+- [ ] WebSocket support
+- [ ] Global variables
+- [ ] Import requests from Postman / Insomnia
+- [ ] Request/response history
+
+## License
+MIT. See [LICENSE](LICENSE).

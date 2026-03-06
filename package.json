@@ -1,5 +1,6 @@
 {
-  "name": "fetchx-electron",
+  "name": "fetchx",
+  "productName": "fetchx",
   "version": "0.1.0",
   "private": true,
   "main": "electron/main.cjs",
@@ -10,7 +11,27 @@
     "electron:dev": "wait-on tcp:5173 && electron .",
     "dev:all": "concurrently -k \"npm:dev\" \"npm:electron:dev\"",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dist": "electron-builder -m"
+  },
+  "build": {
+    "appId": "com.abe.fetchx",
+    "productName": "fetchx",
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "icon": "electron/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.developer-tools"
+    }
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -33,6 +54,7 @@
     "@vitejs/plugin-react": "^4.4.1",
     "concurrently": "^9.1.2",
     "electron": "^36.2.1",
+    "electron-builder": "^26.8.1",
     "vite": "^5.4.19",
     "wait-on": "^8.0.4"
   }
